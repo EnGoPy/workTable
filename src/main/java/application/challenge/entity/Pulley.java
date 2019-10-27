@@ -62,7 +62,7 @@ public class Pulley {
         return annotations;
     }
 
-    public void addAnnotation(String annotation){
+    public void addAnnotation(String annotation) {
         this.annotations.add(annotation);
     }
 
@@ -79,9 +79,8 @@ public class Pulley {
     }
 
 
-    public void addContact(Pulley p){
+    public void addContact(Pulley p) {
         this.contact.add(p.getId());
-        System.out.println(this.getId()+"  "+this.contact);
     }
 
     @Override

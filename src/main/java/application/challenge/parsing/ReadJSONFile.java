@@ -13,7 +13,7 @@ public class ReadJSONFile {
 
     private static ObjectMapper objectMapper;
 
-    public static List<Pulley> getSinglePulleysSchemaFromFile(Iterator<JsonNode> iter){
+    public static List<Pulley> getSinglePulleysSchemaFromFile(Iterator<JsonNode> iter) {
 
         objectMapper = new ObjectMapper();
         List<Pulley> pulleysSchema = new ArrayList<>();
@@ -33,7 +33,7 @@ public class ReadJSONFile {
                 pulleysSchema.add(pulley1);
             }
             return pulleysSchema;
-        }catch (JsonProcessingException e){
+        } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
         return pulleysSchema;

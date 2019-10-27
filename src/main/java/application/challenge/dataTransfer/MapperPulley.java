@@ -28,13 +28,12 @@ public class MapperPulley {
 
     public static List<List<PulleyDTO>> transferWholeInput(List<List<Pulley>> inputSets) {
         List<List<PulleyDTO>> transferredSet = new ArrayList<>();
-        for(List<Pulley> someList : inputSets){
+        for (List<Pulley> someList : inputSets) {
             List<PulleyDTO> results = new ArrayList<>();
-            for(Pulley p: someList){
+            for (Pulley p : someList) {
                 PulleyDTO temp = fromEntityToDto(p);
                 results.add(temp);
             }
-            System.out.println(results);
             transferredSet.add(results);
             WriteJSONFile.writeResultToJsonFile(transferredSet);
         }

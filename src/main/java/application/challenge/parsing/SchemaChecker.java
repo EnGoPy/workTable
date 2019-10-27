@@ -14,7 +14,6 @@ public class SchemaChecker {
             for (int j = i + 1; j <= pulleys.size() - 1; j++) {
                 Pulley jPulley = pulleys.get(j);
                 jPulley.setId(j + 1);
-                System.out.println(iPulley.getId() + " compared with " + jPulley.getId());
                 comparingTwoPulleys(iPulley, jPulley);
             }
         }
@@ -83,13 +82,11 @@ public class SchemaChecker {
     private static void collision(Pulley p1, Pulley p2) {
         p1.addAnnotation(" kolizja z krazkiem nr " + p2.getId());
         p2.addAnnotation(" kolizja z krazkiem nr " + p1.getId());
-        System.out.println(" //////////////////////////// COLISION");
     }
 
     private static void clash(Pulley p1, Pulley p2) {
         p1.addAnnotation(" zakleszczenie z krazkiem nr " + p2.getId());
         p2.addAnnotation(" zakleszczenie z krazkiem nr " + p1.getId());
-        System.out.println(" //////////////////////////// CLASH");
     }
 
     private static void nonConcurency(Pulley p1, Pulley p2) {
@@ -115,8 +112,8 @@ public class SchemaChecker {
         }
     }
 
-    private static void correctPulley(Pulley p){
-        if(p.getAnnotations().isEmpty()){
+    private static void correctPulley(Pulley p) {
+        if (p.getAnnotations().isEmpty()) {
             p.addAnnotation("Pulley designed correct");
         }
     }

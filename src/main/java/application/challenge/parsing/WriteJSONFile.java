@@ -11,19 +11,20 @@ public class WriteJSONFile {
 
     private static ObjectMapper objectMapper;
     private static String fileName = "daneWyjsciowe.json";
-    private static File outputFile =  new File(fileName);
+    private static File outputFile = new File(fileName);
 
-    public static void writeResultToJsonFile(List<List<PulleyDTO>> pulleysResults){
+    public static void writeResultToJsonFile(List<List<PulleyDTO>> pulleysResults) {
 
         objectMapper = new ObjectMapper();
 
         try {
             objectMapper.writeValue(outputFile, pulleysResults);
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
-
         }
+    }
 
-
+    public static String getFileName() {
+        return fileName;
     }
 }
