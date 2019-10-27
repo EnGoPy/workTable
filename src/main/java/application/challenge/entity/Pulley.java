@@ -92,27 +92,4 @@ public class Pulley {
                 ", contact=" + contact +
                 '}';
     }
-
-    //    @Override
-//    public String toJson() {
-//        final StringWriter writable = new StringWriter();
-//        try{
-//            this.toJson(writable);
-//        }catch (final IOException e){
-//        }
-//        return writable.toString();
-//    }
-//
-//    @Override
-//    public void toJson(Writer writable) throws IOException {
-//
-//        final JsonObject json  = new JsonObject();
-//        json.put("pulleyId", this.getPulleyId());
-//        json.put("powered", this.isPowered());
-//        json.put("xCord", this.getxCord());
-//        json.put("yCord", this.getyCord());
-//        json.put("rg", this.getRd());
-//        json.put("rd", this.getRd());
-//        json.put("n", this.getN());
-//    }
 }
